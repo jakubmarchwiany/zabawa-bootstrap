@@ -3,9 +3,9 @@ import React, { useState, useContext } from "react";
 import { UserContext } from "../../context/UserContext";
 import Flash from "../partials/Flash"
 
-import { NavLink } from "react-router-dom";
+import { NavLink ,useNavigate} from "react-router-dom";
 
-const Login = () => {
+const Login = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -13,6 +13,8 @@ const Login = () => {
     const [errorVisible, setErrorVisible] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [userContext, setUserContext] = useContext(UserContext);
+
+    let navigate = useNavigate();
 
     const handleOnClick = () => {
         setErrorVisible(false);
@@ -23,6 +25,8 @@ const Login = () => {
         setIsSubmitting(true);
         setError("");
 
+        
+        
         const genericErrorMessage = "Nie udało się zalogować Spróbuj później";
 
         fetch(process.env.REACT_APP_API_ENDPOINT + "login", {
@@ -44,10 +48,10 @@ const Login = () => {
                     setErrorVisible(true)
                 } else {
                     const data = await response.json();
-                    console.log(data)
                     setUserContext((oldValues) => {
                         return { ...oldValues, token: data.token };
                     });
+                    navigate("/user/home", { replace: true });
                 }
             })
             .catch((error) => {

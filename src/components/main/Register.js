@@ -42,7 +42,6 @@ const Register = () => {
                         setError("Invalid email and password combination.");
                         setErrorVisible(true);
                     } else if (response.status === 500) {
-                        console.log(response);
                         const data = await response.json();
                         if (data.message) setError(data.message || genericErrorMessage);
                         setErrorVisible(true);

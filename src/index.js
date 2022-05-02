@@ -7,11 +7,15 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
+import { UserProvider } from "./context/UserContext";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
     <React.StrictMode>
-        <App />
+        <UserProvider>
+            <App />
+        </UserProvider>
     </React.StrictMode>
 );
 
