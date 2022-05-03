@@ -16,7 +16,7 @@ import Home from "./components/main/Home";
 import PageNotFound from "./components/main/PageNotFound";
 
 import UserHome from "./components/user/UserHome";
-import NewLocation from "./components/user/NewLocation";
+import NewPlace from "./components/user/NewPlace";
 
 function App() {
     const [userContext, setUserContext] = useContext(UserContext);
@@ -103,10 +103,10 @@ function App() {
                     }
                 />
                 <Route
-                    path="/user/newLocation"
+                    path="/user/newPlace"
                     element={
                         <RequireAuth redirectTo="/login">
-                            <NewLocation />
+                            <NewPlace />
                         </RequireAuth>
                     }
                 />

@@ -14,7 +14,7 @@ const initialViewState = {
     zoom: 12.5,
 };
 
-const UserMap = (props) => {
+const NewPlaceMap = (props) => {
     const [marker, setMarker] = useState({
         latitude: 51.107883,
         longitude: 17.038538,
@@ -55,4 +55,4 @@ const UserMap = (props) => {
     );
 }
 
-export default UserMap;
+export default NewPlaceMap;

@@ -33,12 +33,12 @@ const Navbar = (props) => {
                     <div className="navbar-nav">
                         {isUser ? (
                             <NavLink
-                                to="/user/newLocation"
+                                to="/user/newPlace"
                                 className={({ isActive }) =>
                                     isActive ? activeNavLinkStyle : "nav-link"
                                 }
                             >
-                                Dodaj lokalizacje
+                                Dodaj Miejsce
                             </NavLink>
                         ) : (
                             <NavLink

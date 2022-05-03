@@ -3,7 +3,9 @@ import React, { useCallback, useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
 
 import Loader from "../partials/Loader";
-import UserMap from "./UserMap";
+import NewPlace from "./NewPlace";
+import NewPlaceMap from "./NewPlaceMap";
+import UserMap from "./NewPlaceMap";
 
 
 
@@ -69,7 +71,7 @@ const UserHome = () => {
         <div className="row mt-xl-5 mt-1 mx-0">
             <div className="col-xl-2 col-12 offset-0 rounded-3 shadow bg-white p-4"></div>
             <div className="col-xl-6 col-12 offset-xl-1 offset-0 bg-black p-0" style={{height: "750px"}}>
-            <UserMap/>
+            {/* <NewPlaceMap/> */}
             </div>
             
             <div className="col-xl-2 col-12 offset-xl-1 offset-0 bg-danger " style={{height: "700px"}}>
