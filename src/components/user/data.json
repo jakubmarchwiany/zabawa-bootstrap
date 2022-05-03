@@ -1,0 +1,18 @@
+[
+    {
+        "city": "New York",
+        "population": "8,175,133",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+        "state": "New York",
+        "latitude": 51.11019975999554,
+        "longitude": 17.06052532909891
+    },
+    {
+        "city": "Los Angeles",
+        "population": "3,792,621",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/5/57/LA_Skyline_Mountains2.jpg/240px-LA_Skyline_Mountains2.jpg",
+        "state": "California",
+        "latitude": 51.121141359546726,
+        "longitude": 17.056658647291613
+    }
+]
